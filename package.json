@@ -1,0 +1,19 @@
+{
+  "name": "pubsubmanager",
+  "description": "A simple and lightweight module for publishing and subscribing to custome events.",
+  "version": "0.1.0",
+  "keywords": ["event", "manager", "pubsub", "subscribe", "fire", "publish"],
+  "author": {
+    "name": "Chirag Sanghvi",
+    "email": "chirag_sanghvi7@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiragsanghvi/PubSubManager.git"
+  },
+  "main": "./PubSubManager.js",
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": "*"
+  }
+}
