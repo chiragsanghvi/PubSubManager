@@ -16,6 +16,8 @@ It follows a publisher-subscribers model. An event if fired, multiple subscriber
 
 For example, consider a scenario where on a particular action you need to perform multiple actions irrespective of eachother.
 ```javascript
+var PubSubManager = require('pubsubmanager');
+
 var setProfile = function(sender, args) {
 	//custom code
 };
@@ -75,8 +77,10 @@ PubSubManager.clearSubscriptions("eventName");
 For example, consider you're writing a multipage app, and intend to reuse components/javascript files in these pages.
 There're cases where you may include not all but only some of these files. Thus, unintentionally giving way for exceptions, for undefined functions, which're defined in other script which was not included. This is the scenario where PubSubManager has its real purpose.
 
-a.js
+**a.js**
 ```javascript
+var PubSubManager = require('pubsubmanager');
+
 var showMessage = function(sender, args) {
 	//Your code
 };
@@ -85,8 +89,10 @@ var showMessage = function(sender, args) {
 PubSubManager.subscribe('message.show', showMessage);
 ```
 
-b.js
+**b.js**
 ```javascript
+var PubSubManager = require('pubsubmanager');
+
 var hideMessage = function(sender, args) {
 	//Your code
 };
@@ -95,8 +101,9 @@ var hideMessage = function(sender, args) {
 PubSubManager.subscribe('message.hide', hideMessage);
 ```
 
-c.js
+**c.js**
 ```javascript
+var PubSubManager = require('pubsubmanager');
 //Fire message show event
 PubSubManager.fire('message.show', this, { msg: 'This is a message' });
 
