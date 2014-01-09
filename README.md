@@ -70,7 +70,7 @@ This method allows you to unsubscribe all other subscriptions for this event.
 ```javascript
 PubSubManager.clearSubscriptions("eventName");
 ```
-** Other Scenarios **
+**Other Scenarios**
 
 For example, consider you're writing a multipage app, and intend to reuse components/javascript files in these pages.
 There're cases where you may include not all but only some of these files. Thus, unintentionally giving way for exceptions, for undefined functions, which're defined in other script which was not included. This is the scenario where PubSubManager has its real purpose.
