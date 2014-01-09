@@ -12,7 +12,7 @@ This library is basically used in scenarios where custom and mutiple eventing is
 
 It follows a publisher-subscribers model. An event if fired, multiple subscribers who're listening to that event receive that event.
 
-** Basic Scenario **
+**Basic Scenario**
 
 For example, consider a scenario where on a particular action you need to perform multiple actions irrespective of eachother.
 ```javascript
